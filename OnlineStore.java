@@ -64,7 +64,7 @@ public class OnlineStore {
 
     public void checkCondition() {
         System.out.println("Do you wish to continue? enter yes or no");
-        String userInput = "";
+        String userInput;
         do {
             userInput = scanner.next();
             if (userInput.equalsIgnoreCase("yes")) {
