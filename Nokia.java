@@ -233,4 +233,18 @@ public class Nokia {
                 System.out.println("Invalid input!!!");
         }
     }
+    public void checkingConditions(){
+        System.out.println("Do you wish to continue? Enter yes/no");
+        String userChoice;
+        do {
+            userChoice= scanner.next();
+            if (userChoice.equalsIgnoreCase("yes")) {
+                System.out.print(displayMenu());
+                optionMenu();
+                System.out.print("Do you wish to continue? Enter yes/no");
+            }else{
+                System.out.println("Thank you for using Nokia 3310 ");
+            }
+        } while (userChoice.equalsIgnoreCase("yes"));
+    }
 }
