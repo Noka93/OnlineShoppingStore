@@ -85,105 +85,34 @@ public class Nokia {
                 9  -> Speed dials
                 10 -> Voice tags
                 """);
-
         userInput = scanner.nextInt();
         switch (userInput){
             case 1 :
                 System.out.println("Enter details");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-               userInput = scanner.nextInt();
-               if (userInput == 0) {
-                   phoneBookMenu();
-               } else if (userInput == 12) {
-                   System.out.println(displayMenu());
-                   optionMenu();
-
-               }else {
-                       System.out.println("Invalid input");
-               }
+                checkingPhoneBook();
                 break;
             case 2:
                 System.out.println("Enter service number");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 3:
                 System.out.println("Add contact details");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 4:
                 System.out.println("Delete contact details");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
             case 5:
                 System.out.println("Edit contact details");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 6:
                 System.out.println("Assign tone");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 7:
                 System.out.println("Send business card");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 8:
                 System.out.print("""
@@ -191,48 +120,19 @@ public class Nokia {
                         1 -> Type of view
                         2 -> Memory status
                         """);
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 9 :
                 System.out.println("Speed dials");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             case 10:
                 System.out.println("Voice tags");
-                System.out.println("Enter 0 to go back to phone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    phoneBookMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingPhoneBook();
                 break;
             default:
                 System.out.println("An invalid number has been inputted");
+                checkingPhoneBook();
         }
     }
     public void messageMenu(){
@@ -245,93 +145,32 @@ public class Nokia {
                 5 -> Picture messages
                 6 -> Template
                 7 -> Message settings
-                
                 """);
         userInput = scanner.nextInt();
         switch (userInput){
             case 1:
                 System.out.println("Write new messages");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 2:
                 System.out.println("You have 10 new messages");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 3:
                 System.out.println("3 messages sent successfully");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 4:
                 System.out.println("Message has been stored in draft");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 5:
                 System.out.println("Send picture messages");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 6:
                 System.out.println("Choose smileys");
-                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    messageMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingMessages();
                 break;
             case 7:
                 System.out.println("""
@@ -339,8 +178,8 @@ public class Nokia {
                         1 -> Set 1
                         2 -> Common
                         """);
-                int userChoice = scanner.nextInt();
-                switch (userChoice){
+                userInput = scanner.nextInt();
+                switch (userInput){
                     case 1:
                         System.out.print("""
                                 Enter :
@@ -350,56 +189,25 @@ public class Nokia {
                                 """);
                         userInput = scanner.nextInt();
                         switch (userInput){
-
                             case 1:
                                 System.out.println("Message center number is 0000001234");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                                 break;
                             case 2:
                                 System.out.println("Message sent as MMS or SMS");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                                 break;
                             case 3:
                                 System.out.println("Message validity number is set");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                             break;
                             default:
                                 System.out.println("Invalid entry");
+                                checkingMessages();
                         }
                         break;
                     case 2:
-                        System.out.println("""
+                        System.out.print("""
                                 Enter :
                                 1 -> Delivery report
                                 2 -> Reply via same centre
@@ -407,58 +215,26 @@ public class Nokia {
                                 """);
                         int userInput1 = scanner.nextInt();
                         switch (userInput1){
-                            case 0:
-                                messageMenu();
                             case 1:
                                 System.out.println("Delivery report : Delivered/Not Delivered");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                                 break;
                             case 2:
                                 System.out.println("Reply messages via same message center number");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                                 break;
                             case 3:
                                 System.out.println("Character support: Nokia");
-                                System.out.println("Enter 0 to go back to message menu or 12 for main menu");
-                                userInput = scanner.nextInt();
-                                if (userInput == 0) {
-                                    messageMenu();
-                                } else if (userInput == 12) {
-                                    System.out.println(displayMenu());
-                                    optionMenu();
-
-                                }else {
-                                    System.out.println("Invalid input");
-                                }
+                                checkingMessages();
                                 break;
                             default:
                                 System.out.println("Invalid input");
-                        }
+                                checkingMessages();
+                          }
                 }
             default:
                 System.out.println("An invalid number has been inputted");
         }
-
     }
     public void callRegMenu(){
         System.out.print("""
@@ -477,62 +253,22 @@ public class Nokia {
             switch (userInput){
                 case 1:
                     System.out.println("Missed calls : 50");
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    checkingCallReg();
                     break;
                 case 2:
                     System.out.println("Received calls : 6");
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    checkingCallReg();
                     break;
                 case 3:
                     System.out.println("Received calls : 40");
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    checkingCallReg();
                     break;
                 case 4:
                     System.out.println("Delete Message");
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    checkingCallReg();
                     break;
                 case 5:
-                    System.out.println("""
+                    System.out.print("""
                             Enter:
                             1 -> Last call duration
                             2 -> All calls' duration
@@ -544,80 +280,29 @@ public class Nokia {
                     switch (userInput){
                             case 1:
                             System.out.println("Calculating last call duration");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                                checkingCallReg();
                             break;
                         case 2:
                             System.out.println("Calculating all call duration");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                             break;
                         case 3:
                         System.out.println("Calculating received call duration");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                         break;
                         case 4:
                             System.out.println("Calculating dialled call duration");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                             break;
                         case 5:
                             System.out.println("Clearing calls' timer");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
 
                         default:
                             System.out.println("Invalid input");
+                            checkingCallReg();
                     }
                     break;
-
-
                 case 6:
                     System.out.print("""
                             Enter :
@@ -629,48 +314,19 @@ public class Nokia {
                     switch (userInput){
                         case 1:
                             System.out.println("List of last call");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                             break;
                         case 2:
                             System.out.println("All calls' cost");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                             break;
                         case 3:
                             System.out.println("Clearing counter");
-                            System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                            userInput = scanner.nextInt();
-                            if (userInput == 0) {
-                                callRegMenu();
-                            } else if (userInput == 12) {
-                                System.out.println(displayMenu());
-                                optionMenu();
-
-                            }else {
-                                System.out.println("Invalid input");
-                            }
+                            checkingCallReg();
                             break;
                         default:
                             System.out.println("An invalid number has been inputted");
+                            checkingCallReg();
                     }
                     break;
                 case 7:
@@ -679,34 +335,15 @@ public class Nokia {
                             1 -> Call cost limit
                             2 -> Show costs in
                             """);
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    checkingCallReg();
                     break;
                 case 8:
-                    System.out.println("Prepaid credit");
-                    System.out.println("Enter 0 to go back to call reg menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        callRegMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
+                    System.out.print("Prepaid credit");
+                    checkingCallReg();
                     break;
                 default:
                     System.out.println("An invalid number has been inputted");
+                    checkingCallReg();
             }
     }
 
@@ -734,31 +371,11 @@ public class Nokia {
                         7 -> Pegasus
                         8 - Perseus
                         """);
-                System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    tonesMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingTones();
                 break;
             case 2:
                 System.out.println("Increase or Decrease volume");
-                System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    tonesMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingTones();
                 break;
             case 3:
                 System.out.print("""
@@ -771,48 +388,19 @@ public class Nokia {
                 switch (userInput){
                     case 1:
                         System.out.println("Your phone has been placed on silence");
-                        System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                        userInput = scanner.nextInt();
-                        if (userInput == 0) {
-                            tonesMenu();
-                        } else if (userInput == 12) {
-                            System.out.println(displayMenu());
-                            optionMenu();
-
-                        }else {
-                            System.out.println("Invalid input");
-                        }
+                        checkingTones();
                         break;
                     case 2:
                         System.out.println("Ring tone is ...");
-                        System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                        userInput = scanner.nextInt();
-                        if (userInput == 0) {
-                            tonesMenu();
-                        } else if (userInput == 12) {
-                            System.out.println(displayMenu());
-                            optionMenu();
-
-                        }else {
-                            System.out.println("Invalid input");
-                        }
+                        checkingTones();
                         break;
                     case 3:
                         System.out.println("Your phone has been placed on vibration");
-                        System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                        userInput = scanner.nextInt();
-                        if (userInput == 0) {
-                            tonesMenu();
-                        } else if (userInput == 12) {
-                            System.out.println(displayMenu());
-                            optionMenu();
-
-                        }else {
-                            System.out.println("Invalid input");
-                        }
+                        checkingTones();
                         break;
                     default:
                         System.out.println("Invalid input");
+                        checkingTones();
                 }
                 break;
             case 4:
@@ -828,17 +416,7 @@ public class Nokia {
                         8 -> Perseus
                         9 -> silent
                         """);
-                System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    tonesMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingTones();
                 break;
             case 5:
                 System.out.print("""
@@ -853,17 +431,7 @@ public class Nokia {
                         8 -> Perseus
                         9 -> Vibrating
                         """);
-                System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    tonesMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingTones();
                 break;
             case 6:
                 System.out.print("""
@@ -879,23 +447,11 @@ public class Nokia {
                         9 -> Vibration
                         10 -> Silent
                         """);
-                System.out.println("Enter 0 to go back to tone menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    tonesMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
-                break;
-            case 12:
-                displayMenu();
+                checkingTones();
                 break;
             default:
                 System.out.print("An invalid number has been inputted");
+                checkingTones();
         }
     }
 
@@ -918,17 +474,7 @@ public class Nokia {
                         4 -> Own number sending
                         5 -> Automatic answer
                         """);
-                System.out.println("Enter 0 to go back to settings menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    settingMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                    checkingSetting();
                 break;
             case 2:
                 System.out.print("""
@@ -940,17 +486,7 @@ public class Nokia {
                         5 -> Lights
                         6 -> Confirm  SIM service actions
                         """);
-                System.out.println("Enter 0 to go back to setting menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    settingMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingSetting();
                 break;
             case 3:
                 System.out.print("""
@@ -962,88 +498,39 @@ public class Nokia {
                         5 -> Phone security
                         6 -> Change access codes
                         """);
-                System.out.println("Enter 0 to go back to settings menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    settingMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingSetting();
                 break;
             case 4:
                 System.out.print("""
                         Enter :
                         1 -> for factory reset
                         """);
-                System.out.println("Enter 0 to go back to settings menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    settingMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingSetting();
                 break;
 
             default:
                 System.out.print("An invalid number has been inputted");
+                checkingSetting();
         }
-
     }
 
     public void callDivertMenu(){
         System.out.print("Call diverting ");
-        System.out.println("Enter 0 to go back to call divert menu or 12 for main menu");
-        userInput = scanner.nextInt();
-        if (userInput == 0) {
-            callDivertMenu();
-        } else if (userInput == 12) {
-            System.out.println(displayMenu());
-            optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
-        }
+        checkingCallDivert();
     }
 
     public void Profile(){
         System.out.println("Enter profile details");
-        System.out.println("Enter 0 to go back to profile menu or 12 for main menu");
-        userInput = scanner.nextInt();
-        if (userInput == 0) {
-            Profile();
-        } else if (userInput == 12) {
-            System.out.println(displayMenu());
-            optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
-        }
+        checkingProfile();
     }
 
     public void calculatorMenu(){
+        System.out.println("Enter any two number for addition ");
         int sum1 = scanner.nextInt();
         int sum2 = scanner.nextInt();
         int total = sum1 + sum2;
-        System.out.println("You can only add two numbers. enter num" + total);
-        System.out.println("Enter 0 to go back to calculator menu or 12 for main menu");
-        userInput = scanner.nextInt();
-        if (userInput == 0) {
-            calculatorMenu();
-        } else if (userInput == 12) {
-            System.out.println(displayMenu());
-            optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
-        }
+        System.out.println(sum1 + sum2 + " = " + total);
+        checkingCalculator();
     }
     public void Chats(){
         System.out.print("""
@@ -1052,17 +539,7 @@ public class Nokia {
                 2 -> weChat
              
                 """);
-        System.out.println("Enter 0 to go back to chat menu or 12 for main menu");
-        userInput = scanner.nextInt();
-        if (userInput == 0) {
-            Chats();
-        } else if (userInput == 12) {
-            System.out.println(displayMenu());
-            optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
-        }
+        checkingChats();
     }
 
     public void clockMenu(){
@@ -1079,101 +556,31 @@ public class Nokia {
         switch (userInput){
                 case 1:
                 System.out.println("Set alarm");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                    System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                    userInput = scanner.nextInt();
-                    if (userInput == 0) {
-                        clockMenu();
-                    } else if (userInput == 12) {
-                        System.out.println(displayMenu());
-                        optionMenu();
-
-                    }else {
-                        System.out.println("Invalid input");
-                    }
-                }
+                   checkingClock();
                 break;
             case 2:
                 System.out.println("Set clock");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingClock();
                 break;
             case 3:
                 System.out.println("Set date");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingClock();
                 break;
             case 4:
                 System.out.println("Stop watch");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingClock();
                 break;
             case 5:
                 System.out.println("Set countdown timer");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingClock();
                 break;
             case 6:
                 System.out.println("Auto update of date and timer");
-                System.out.println("Enter 0 to go back to clock menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    clockMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingClock();
                 break;
             default:
                 System.out.print("An invalid number has been inputted");
+                checkingClock();
         }
     }
 
@@ -1187,43 +594,33 @@ public class Nokia {
         switch (userInput){
             case 1:
                 System.out.println("Snake games ready to play");
-                System.out.println("Enter 0 to go back to game menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    gameMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingGames();
                 break;
             case 2:
                 System.out.println("Sudoku game ready to play");
-                System.out.println("Enter 0 to go back to game menu or 12 for main menu");
-                userInput = scanner.nextInt();
-                if (userInput == 0) {
-                    gameMenu();
-                } else if (userInput == 12) {
-                    System.out.println(displayMenu());
-                    optionMenu();
-
-                }else {
-                    System.out.println("Invalid input");
-                }
+                checkingGames();
                 break;
                 default:
                 System.out.print("An invalid number has been inputted");
+                checkingGames();
         }
     }
     public void simServices(){
         System.out.println("Your are connected to MTN ");
-        System.out.println("Enter 0 to go back to game menu or 12 for main menu");
+        checkingSimService();
+
+    }
+
+    public void Reminder(){
+        System.out.println("Set activity");
+        checkingReminder();
+    }
+    public void checkingPhoneBook(){
+        System.out.print("Enter 0 to go back to phone menu or 1 for main menu");
         userInput = scanner.nextInt();
         if (userInput == 0) {
-            simServices();
-        } else if (userInput == 12) {
+            phoneBookMenu();
+        } else if (userInput == 1) {
             System.out.println(displayMenu());
             optionMenu();
 
@@ -1232,13 +629,164 @@ public class Nokia {
         }
     }
 
-    public void Reminder(){
-        System.out.println("Set activity");
-        System.out.println("Enter 0 to go back to game menu or 12 for main menu");
+    public void checkingMessages(){
+        System.out.print("Enter 0 to go back to message menu or 1 for main menu");
         userInput = scanner.nextInt();
         if (userInput == 0) {
-            Reminder();
-        } else if (userInput == 12) {
+            messageMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingCallReg(){
+        System.out.print("Enter 0 to go back to call register menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            callRegMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingTones(){
+        System.out.print("Enter 0 to go back to tones menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            tonesMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingSetting(){
+        System.out.print("Enter 0 to go back to settings menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            settingMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingCallDivert(){
+        System.out.print("Enter 0 to go back to call divert menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            callDivertMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingProfile(){
+        System.out.print("Enter 0 to go back to profile menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            Profile();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingCalculator(){
+        System.out.print("Enter 0 to go back to calculator menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            calculatorMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingGames(){
+        System.out.print("Enter 0 to go back to games menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            gameMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingChats(){
+        System.out.print("Enter 0 to go back to Chats menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            Chats();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+    public void checkingClock(){
+        System.out.print("Enter 0 to go back to clock menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            clockMenu();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+
+    public void checkingSimService(){
+        System.out.print("Enter 0 to go back to sim service menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            simServices();
+        } else if (userInput == 1) {
+            System.out.println(displayMenu());
+            optionMenu();
+
+        }else {
+            System.out.println("Invalid input");
+        }
+    }
+    public void checkingReminder(){
+        System.out.print("Enter 0 to go back to reminder menu or 1 for main menu");
+        userInput = scanner.nextInt();
+        if (userInput == 0) {
+            callRegMenu();
+        } else if (userInput == 1) {
             System.out.println(displayMenu());
             optionMenu();
 
@@ -1264,5 +812,4 @@ public class Nokia {
             }
 
     }
-
 }
