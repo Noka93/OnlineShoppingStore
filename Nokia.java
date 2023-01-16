@@ -811,5 +811,12 @@ public class Nokia {
                 checkingConditions();
             }
 
+
+
+    }
+
+    public void nokiaPhone(){
+        System.out.println(displayMenu());
+        optionMenu();
     }
 }
