@@ -68,6 +68,7 @@ public class Nokia {
                 break;
             default:
                 System.out.println("Invalid input!!!");
+                checkingConditions();
         }
     }
 
@@ -214,7 +215,7 @@ public class Nokia {
                                 3 -> Character support
                                 """);
                         int userInput1 = scanner.nextInt();
-                        switch (userInput1){
+                         switch (userInput1){
                             case 1:
                                 System.out.println("Delivery report : Delivered/Not Delivered");
                                 checkingMessages();
