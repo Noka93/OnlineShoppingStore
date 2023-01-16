@@ -83,7 +83,7 @@ public class Nokia {
                 6  -> Assign tone
                 7  -> Send b'card
                 8  -> Options
-                9  -> Speed dials
+                9   -> Speed dials
                 10 -> Voice tags
                 """);
         userInput = scanner.nextInt();
@@ -803,7 +803,6 @@ public class Nokia {
             if (userChoice.equalsIgnoreCase("yes")) {
                 System.out.print(displayMenu());
                 optionMenu();
-                System.out.print("Do you wish to continue? Enter yes/no");
             } else if (userChoice.equalsIgnoreCase("no")){
                 System.out.println("Thank you for using Nokia 3310 ");
                 }
