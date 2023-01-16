@@ -6,6 +6,11 @@ public class Nokia {
     private int userInput;
     Scanner scanner = new Scanner(System.in);
 
+    public void nokiaPhone(){
+        System.out.println(displayMenu());
+        optionMenu();
+    }
+
     public String displayMenu(){
         return """
                 Welcome!!!
@@ -815,8 +820,4 @@ public class Nokia {
 
     }
 
-    public void nokiaPhone(){
-        System.out.println(displayMenu());
-        optionMenu();
-    }
-}
+   }
