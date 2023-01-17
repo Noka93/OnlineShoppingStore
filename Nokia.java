@@ -6,12 +6,7 @@ public class Nokia {
     private int userInput;
     Scanner scanner = new Scanner(System.in);
 
-    public void nokiaPhone(){
-        System.out.println(displayMenu());
-        optionMenu();
-    }
-
-    public String displayMenu(){
+       public String displayMenu(){
         return """
                 Welcome!!!
                 Enter :
@@ -72,8 +67,9 @@ public class Nokia {
                 simServices();
                 break;
             default:
-                System.out.println("Invalid input!!!");
+                System.out.println("Invalid input");
                 checkingConditions();
+
         }
     }
 
@@ -138,7 +134,7 @@ public class Nokia {
                 break;
             default:
                 System.out.println("An invalid number has been inputted");
-                checkingPhoneBook();
+//                checkingPhoneBook();
         }
     }
     public void messageMenu(){
@@ -185,8 +181,8 @@ public class Nokia {
                         2 -> Common
                         """);
                 userInput = scanner.nextInt();
-                switch (userInput){
-                    case 1:
+                switch (userInput) {
+                    case 1 -> {
                         System.out.print("""
                                 Enter :
                                 1 -> Message center number
@@ -194,25 +190,26 @@ public class Nokia {
                                 3 -> Message validity
                                 """);
                         userInput = scanner.nextInt();
-                        switch (userInput){
-                            case 1:
+                        switch (userInput) {
+                            case 1 -> {
                                 System.out.println("Message center number is 0000001234");
                                 checkingMessages();
-                                break;
-                            case 2:
+                            }
+                            case 2 -> {
                                 System.out.println("Message sent as MMS or SMS");
                                 checkingMessages();
-                                break;
-                            case 3:
+                            }
+                            case 3 -> {
                                 System.out.println("Message validity number is set");
                                 checkingMessages();
-                            break;
-                            default:
+                            }
+                            default -> {
                                 System.out.println("Invalid entry");
                                 checkingMessages();
+                            }
                         }
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         System.out.print("""
                                 Enter :
                                 1 -> Delivery report
@@ -220,23 +217,25 @@ public class Nokia {
                                 3 -> Character support
                                 """);
                         int userInput1 = scanner.nextInt();
-                         switch (userInput1){
-                            case 1:
+                        switch (userInput1) {
+                            case 1 -> {
                                 System.out.println("Delivery report : Delivered/Not Delivered");
                                 checkingMessages();
-                                break;
-                            case 2:
+                            }
+                            case 2 -> {
                                 System.out.println("Reply messages via same message center number");
                                 checkingMessages();
-                                break;
-                            case 3:
+                            }
+                            case 3 -> {
                                 System.out.println("Character support: Nokia");
                                 checkingMessages();
-                                break;
-                            default:
+                            }
+                            default -> {
                                 System.out.println("Invalid input");
                                 checkingMessages();
-                          }
+                            }
+                        }
+                    }
                 }
             default:
                 System.out.println("An invalid number has been inputted");
@@ -256,101 +255,103 @@ public class Nokia {
                 0 -> 0 to come back to message menu
                 """);
             userInput = scanner.nextInt();
-            switch (userInput){
-                case 1:
-                    System.out.println("Missed calls : 50");
-                    checkingCallReg();
-                    break;
-                case 2:
-                    System.out.println("Received calls : 6");
-                    checkingCallReg();
-                    break;
-                case 3:
-                    System.out.println("Received calls : 40");
-                    checkingCallReg();
-                    break;
-                case 4:
-                    System.out.println("Delete Message");
-                    checkingCallReg();
-                    break;
-                case 5:
-                    System.out.print("""
-                            Enter:
-                            1 -> Last call duration
-                            2 -> All calls' duration
-                            3 -> Received calls' duration
-                            4 -> Dialled calls' duration
-                            5 -> Clear timers
-                            """);
-                    userInput = scanner.nextInt();
-                    switch (userInput){
-                            case 1:
-                            System.out.println("Calculating last call duration");
-                                checkingCallReg();
-                            break;
-                        case 2:
-                            System.out.println("Calculating all call duration");
-                            checkingCallReg();
-                            break;
-                        case 3:
-                        System.out.println("Calculating received call duration");
-                            checkingCallReg();
-                        break;
-                        case 4:
-                            System.out.println("Calculating dialled call duration");
-                            checkingCallReg();
-                            break;
-                        case 5:
-                            System.out.println("Clearing calls' timer");
-                            checkingCallReg();
-
-                        default:
-                            System.out.println("Invalid input");
-                            checkingCallReg();
-                    }
-                    break;
-                case 6:
-                    System.out.print("""
-                            Enter :
-                            1 -> Last call
-                            2 -> All calls' cost
-                            3 -> Clear counter
-                            """);
-                    userInput = scanner.nextInt();
-                    switch (userInput){
-                        case 1:
-                            System.out.println("List of last call");
-                            checkingCallReg();
-                            break;
-                        case 2:
-                            System.out.println("All calls' cost");
-                            checkingCallReg();
-                            break;
-                        case 3:
-                            System.out.println("Clearing counter");
-                            checkingCallReg();
-                            break;
-                        default:
-                            System.out.println("An invalid number has been inputted");
-                            checkingCallReg();
-                    }
-                    break;
-                case 7:
-                    System.out.print("""
-                            Enter :
-                            1 -> Call cost limit
-                            2 -> Show costs in
-                            """);
-                    checkingCallReg();
-                    break;
-                case 8:
-                    System.out.print("Prepaid credit");
-                    checkingCallReg();
-                    break;
-                default:
-                    System.out.println("An invalid number has been inputted");
-                    checkingCallReg();
+        switch (userInput) {
+            case 1 -> {
+                System.out.println("Missed calls : 50");
+                checkingCallReg();
             }
+            case 2 -> {
+                System.out.println("Received calls : 6");
+                checkingCallReg();
+            }
+            case 3 -> {
+                System.out.println("Received calls : 40");
+                checkingCallReg();
+            }
+            case 4 -> {
+                System.out.println("Delete Message");
+                checkingCallReg();
+            }
+            case 5 -> {
+                System.out.print("""
+                        Enter:
+                        1 -> Last call duration
+                        2 -> All calls' duration
+                        3 -> Received calls' duration
+                        4 -> Dialled calls' duration
+                        5 -> Clear timers
+                        """);
+                userInput = scanner.nextInt();
+                switch (userInput) {
+                    case 1:
+                        System.out.println("Calculating last call duration");
+                        checkingCallReg();
+                        break;
+                    case 2:
+                        System.out.println("Calculating all call duration");
+                        checkingCallReg();
+                        break;
+                    case 3:
+                        System.out.println("Calculating received call duration");
+                        checkingCallReg();
+                        break;
+                    case 4:
+                        System.out.println("Calculating dialled call duration");
+                        checkingCallReg();
+                        break;
+                    case 5:
+                        System.out.println("Clearing calls' timer");
+                        checkingCallReg();
+
+                    default:
+                        System.out.println("Invalid input");
+                        checkingCallReg();
+                }
+            }
+            case 6 -> {
+                System.out.print("""
+                        Enter :
+                        1 -> Last call
+                        2 -> All calls' cost
+                        3 -> Clear counter
+                        """);
+                userInput = scanner.nextInt();
+                switch (userInput) {
+                    case 1 -> {
+                        System.out.println("List of last call");
+                        checkingCallReg();
+                    }
+                    case 2 -> {
+                        System.out.println("All calls' cost");
+                        checkingCallReg();
+                    }
+                    case 3 -> {
+                        System.out.println("Clearing counter");
+                        checkingCallReg();
+                    }
+                    default -> {
+                        System.out.println("An invalid number has been inputted");
+                        checkingCallReg();
+                    }
+                }
+            }
+            case 7 -> {
+                System.out.print("""
+                        Enter :
+                        1 -> Call cost limit
+                        2 -> Show costs in
+                        """);
+                checkingCallReg();
+            }
+            case 8 -> {
+                System.out.print("Prepaid credit");
+                checkingCallReg();
+            }
+            default -> {
+                System.out.println("An invalid number has been inputted");
+                checkingCallReg();
+            }
+        }
     }
 
     public void tonesMenu(){
@@ -364,8 +365,8 @@ public class Nokia {
                         6 -> Warning and game tones
                         """);
         userInput = scanner.nextInt();
-        switch (userInput){
-            case 1:
+        switch (userInput) {
+            case 1 -> {
                 System.out.print("""
                         Enter :
                         1 -> Nokia tone
@@ -378,12 +379,12 @@ public class Nokia {
                         8 - Perseus
                         """);
                 checkingTones();
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("Increase or Decrease volume");
                 checkingTones();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.print("""
                         Enter :
                         1 -> Silent
@@ -391,25 +392,26 @@ public class Nokia {
                         3 -> Vibrating
                         """);
                 userInput = scanner.nextInt();
-                switch (userInput){
-                    case 1:
+                switch (userInput) {
+                    case 1 -> {
                         System.out.println("Your phone has been placed on silence");
                         checkingTones();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         System.out.println("Ring tone is ...");
                         checkingTones();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         System.out.println("Your phone has been placed on vibration");
                         checkingTones();
-                        break;
-                    default:
+                    }
+                    default -> {
                         System.out.println("Invalid input");
                         checkingTones();
+                    }
                 }
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.print("""
                         Enter :
                         1 -> Nokia tone
@@ -423,8 +425,8 @@ public class Nokia {
                         9 -> silent
                         """);
                 checkingTones();
-                break;
-            case 5:
+            }
+            case 5 -> {
                 System.out.print("""
                         Enter :
                         1 -> Nokia tone
@@ -438,8 +440,8 @@ public class Nokia {
                         9 -> Vibrating
                         """);
                 checkingTones();
-                break;
-            case 6:
+            }
+            case 6 -> {
                 System.out.print("""
                         Enter :
                         1 -> Nokia tone
@@ -454,10 +456,11 @@ public class Nokia {
                         10 -> Silent
                         """);
                 checkingTones();
-                break;
-            default:
+            }
+            default -> {
                 System.out.print("An invalid number has been inputted");
                 checkingTones();
+            }
         }
     }
 
@@ -470,8 +473,8 @@ public class Nokia {
                 4 -> Restore factory settings
                 """);
         userInput = scanner.nextInt();
-        switch (userInput){
-                case 1:
+        switch (userInput) {
+            case 1 -> {
                 System.out.print("""
                         Enter :
                         1 -> Automatic redial
@@ -480,9 +483,9 @@ public class Nokia {
                         4 -> Own number sending
                         5 -> Automatic answer
                         """);
-                    checkingSetting();
-                break;
-            case 2:
+                checkingSetting();
+            }
+            case 2 -> {
                 System.out.print("""
                         Enter :
                         1 -> Language
@@ -493,8 +496,8 @@ public class Nokia {
                         6 -> Confirm  SIM service actions
                         """);
                 checkingSetting();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.print("""
                         Enter :
                         1 -> PIN code request
@@ -505,18 +508,18 @@ public class Nokia {
                         6 -> Change access codes
                         """);
                 checkingSetting();
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.print("""
                         Enter :
                         1 -> for factory reset
                         """);
                 checkingSetting();
-                break;
-
-            default:
+            }
+            default -> {
                 System.out.print("An invalid number has been inputted");
                 checkingSetting();
+            }
         }
     }
 
@@ -559,34 +562,35 @@ public class Nokia {
                 6 -> Auto update of date and time
                 """);
         userInput = scanner.nextInt();
-        switch (userInput){
-                case 1:
+        switch (userInput) {
+            case 1 -> {
                 System.out.println("Set alarm");
-                   checkingClock();
-                break;
-            case 2:
+                checkingClock();
+            }
+            case 2 -> {
                 System.out.println("Set clock");
                 checkingClock();
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("Set date");
                 checkingClock();
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.println("Stop watch");
                 checkingClock();
-                break;
-            case 5:
+            }
+            case 5 -> {
                 System.out.println("Set countdown timer");
                 checkingClock();
-                break;
-            case 6:
+            }
+            case 6 -> {
                 System.out.println("Auto update of date and timer");
                 checkingClock();
-                break;
-            default:
+            }
+            default -> {
                 System.out.print("An invalid number has been inputted");
                 checkingClock();
+            }
         }
     }
 
@@ -597,18 +601,19 @@ public class Nokia {
                 2 -> Sudoku
                 """);
         userInput = scanner.nextInt();
-        switch (userInput){
-            case 1:
+        switch (userInput) {
+            case 1 -> {
                 System.out.println("Snake games ready to play");
                 checkingGames();
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("Sudoku game ready to play");
                 checkingGames();
-                break;
-                default:
+            }
+            default -> {
                 System.out.print("An invalid number has been inputted");
                 checkingGames();
+            }
         }
     }
     public void simServices(){
@@ -622,7 +627,7 @@ public class Nokia {
         checkingReminder();
     }
     public void checkingPhoneBook(){
-        System.out.print("Enter 0 to go back to phone menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to phone menu, 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             phoneBookMenu();
@@ -630,13 +635,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingMessages(){
-        System.out.print("Enter 0 to go back to message menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to message menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             messageMenu();
@@ -644,13 +649,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingCallReg(){
-        System.out.print("Enter 0 to go back to call register menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to call register menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             callRegMenu();
@@ -658,13 +663,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingTones(){
-        System.out.print("Enter 0 to go back to tones menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to tones menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             tonesMenu();
@@ -672,13 +677,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingSetting(){
-        System.out.print("Enter 0 to go back to settings menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to settings menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             settingMenu();
@@ -686,13 +691,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingCallDivert(){
-        System.out.print("Enter 0 to go back to call divert menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to call divert menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             callDivertMenu();
@@ -700,13 +705,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingProfile(){
-        System.out.print("Enter 0 to go back to profile menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to profile menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             Profile();
@@ -714,13 +719,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingCalculator(){
-        System.out.print("Enter 0 to go back to calculator menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to calculator menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             calculatorMenu();
@@ -728,13 +733,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingGames(){
-        System.out.print("Enter 0 to go back to games menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to games menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             gameMenu();
@@ -742,13 +747,13 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingChats(){
-        System.out.print("Enter 0 to go back to Chats menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to Chats menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             Chats();
@@ -756,12 +761,12 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
     public void checkingClock(){
-        System.out.print("Enter 0 to go back to clock menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to clock menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             clockMenu();
@@ -769,54 +774,53 @@ public class Nokia {
             System.out.println(displayMenu());
             optionMenu();
 
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingSimService(){
-        System.out.print("Enter 0 to go back to sim service menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to sim service menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             simServices();
         } else if (userInput == 1) {
             System.out.println(displayMenu());
             optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
     public void checkingReminder(){
-        System.out.print("Enter 0 to go back to reminder menu or 1 for main menu");
+        System.out.print("Enter 0 to go back to reminder menu or 1 for main menu and 2 to exit ");
         userInput = scanner.nextInt();
         if (userInput == 0) {
             callRegMenu();
         } else if (userInput == 1) {
             System.out.println(displayMenu());
             optionMenu();
-
-        }else {
-            System.out.println("Invalid input");
+        }else if(userInput == 2) {
+            System.out.println("Press 'no' to exit");
         }
     }
 
     public void checkingConditions(){
-        System.out.println("Do you wish to continue? Enter yes/no");
-        String userChoice;
-            userChoice= scanner.next();
-            if (userChoice.equalsIgnoreCase("yes")) {
-                System.out.print(displayMenu());
-                optionMenu();
-            } else if (userChoice.equalsIgnoreCase("no")){
-                System.out.println("Thank you for using Nokia 3310 ");
+
+            System.out.println("Do you wish to continue? Enter yes/no");
+            String userChoice;
+            do {
+                userChoice = scanner.next();
+                if (userChoice.equalsIgnoreCase("yes")) {
+                    System.out.print(displayMenu());
+                    optionMenu();
+                } else if (userChoice.equalsIgnoreCase("no")) {
+                    System.out.println("Thank you for using Nokia 3310 ");
+                } else {
+                    System.out.println("Invalid. Type 'yes' or 'no'");
+                    checkingConditions();
                 }
-            else {
-                System.out.println("Invalid. Type 'yes' or 'no'");
-                checkingConditions();
-            }
 
-
+            }while (userChoice.equalsIgnoreCase("yes"));
 
     }
 
